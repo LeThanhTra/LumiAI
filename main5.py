@@ -2,10 +2,14 @@
 # 1. Kết nối API
 # -----------------------------
 from openai import OpenAI
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key="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"
-)
+os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
+os.environ["OPENAI_API_KEY"] = "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"
+
+client = OpenAI()
+#client = OpenAI(
+   # base_url="https://openrouter.ai/api/v1",
+   # api_key="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"
+#)
 
 import pandas as pd
 import streamlit as st
