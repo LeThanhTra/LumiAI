@@ -1,0 +1,6 @@
+openai==1.42.0
+streamlit
+pandas
+numpy
+faiss-cpu
+python-dotenv
