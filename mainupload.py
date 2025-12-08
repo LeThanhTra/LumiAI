@@ -168,7 +168,8 @@ ONLY RESPOND IN VIETNAMESE
 
         completion = client.chat.completions.create(
             #model="meta-llama/llama-3.3-70b-instruct:free",
-            model="qwen/qwen2.5-7b-instruct:free",
+            model="nvidia/nemotron-nano-12b-v2-vl:free",
+            #model="qwen/qwen2.5-7b-instruct:free",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
@@ -264,7 +265,8 @@ AGAIN DO NOT MAKE UP INFORMATION
 
     completion = client.chat.completions.create(
         #model="meta-llama/llama-3.3-70b-instruct:free",
-        model="qwen/qwen2.5-7b-instruct:free",
+        model="nvidia/nemotron-nano-12b-v2-vl:free",
+        #model="qwen/qwen2.5-7b-instruct:free",
         messages=[
             {"role": "system", "content": system_prompt},
             *st.session_state.messages[-5:],  # giữ lịch sử ngắn
